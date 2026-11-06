@@ -2,23 +2,64 @@
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
+## Answers
 
-Things you may want to cover:
+### 2.
+Run:
+````
+```
+rails 'numbers:pass'
+```
+````
 
-* Ruby version
+### 3.
+Run:
+````
+```
+rails 'replace:the_string_with_numbers[hello45test]'
+```
+````
 
-* System dependencies
 
-* Configuration
+### 4.a 
+````
+```
+SELECT employee_id, MAX(amount) as max_amount
+ FROM salaries
+GROUP_BY employee_id;
+```
+````
 
-* Database creation
 
-* Database initialization
+### 4.b
+````
+```
+SELECT organisation_id, AVG(amount) as average_amount
+ FROM salaries
+GROUP_BY employee_id;
+```
+````
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### 5.
+````
+```
+function f(x,y){
+    return x+y
+}
 
-* Deployment instructions
+function(x)(y){
 
-* ...
+return function(y){
+    return x+y
+}
+}
+```
+````
+
+### 6. 
+````
+```
+ rails 'sum:sum_the_integer[512]'
+```
+````
