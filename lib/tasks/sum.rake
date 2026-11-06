@@ -3,7 +3,6 @@ namespace :sum do
 
   task :sum_the_integer, [:num] =>  :environment do |task, args|
     sum_of_num = args[:num]
-    greater_length = false
      while sum_of_num.length > 1
        sum = sum_of_num.split("").map(&:to_i).reduce{|sum,num| sum+num}
        sum_of_num = sum.to_s
