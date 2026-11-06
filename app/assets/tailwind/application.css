@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+
+@theme {
+    --color-crimson: #990000;
+    --color-light-red: #c0565c;
+}
+
+
+@layer base {
+  main { 
+     background-color: var(--color-crimson);
+      color: var(--color-white);
+  }
+  h1{
+       font-size: var(--text-4xl);
+    font-weight: 700;
+  }
+}

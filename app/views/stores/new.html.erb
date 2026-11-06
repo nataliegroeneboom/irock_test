@@ -1,0 +1,47 @@
+
+<div class=" flex flex-col" >
+
+    <div class=" p-8">
+        <h1>Coming Soon</h1>
+    </div>
+    <div class="p-8 mt-5 flex-1">
+        
+        <%= form_with model: @store, url: stores_path,
+         data:{
+              controller: "validation",
+            validation_url_value: validate_stores_path,
+            action: "focusout->validation#validate"
+         } do |form| %>
+            <span data-error-for="email" class="text-red-400 text-sm"></span>
+            <%= form.label :email, "Your Email", class:"block text-white text-sm font-semibold pt-4 mb-2" %>
+      
+  
+            <%= form.email_field :email, placeholder: "Email", class:"w-full bg-transparent border-0 border-b border-gray-400
+                  rounded-none px-0 py-2 text-white
+                  placeholder:text-light-red placeholder:text-bold
+                  focus:outline-none focus:ring-0 focus:border-white mb-6" %>
+         
+                <%= form.label :name, "Your Name", class:"block text-white text-sm font-semibold mb-2" %>
+          
+     
+                <%= form.text_field :name, required: true, autofocus: true, placeholder:"Name", class:"w-full bg-transparent border-0 border-b border-gray-400
+                        rounded-none px-0 py-2 text-white
+                          placeholder:text-light-red placeholder:text-bold
+                        focus:outline-none focus:ring-0 focus:border-white mb-6" %>
+      
+      
+        
+ 
+         <%= form.submit "Join the waiting list", class:"w-full bg-white text-black font-semibold
+          py-3 px-6 mt-10
+          uppercase
+          border border-white
+          rounded-t-xl
+          rounded-br-xl
+           cursor-pointer
+          hover:bg-transparent hover:text-white
+          transition-colors duration-300" %>
+        <% end %>
+    </div>
+
+<div>
